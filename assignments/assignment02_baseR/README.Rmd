@@ -7,7 +7,7 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
@@ -27,6 +27,9 @@ prices <- c(4.12553410932665, 4.527955, 5.10156757258139, 4.1114315, 4.655696794
 ```
 
 2. Use `typeof()` to report the type of both vectors.
+```{r}
+typeof(countries)
+```
 
 3. Use `names()` to name the `prices` using `countries`. Show the first 5 values of your new vector
 
