@@ -29,17 +29,39 @@ prices <- c(4.12553410932665, 4.527955, 5.10156757258139, 4.1114315, 4.655696794
 2. Use `typeof()` to report the type of both vectors.
 ```{r}
 typeof(countries)
+typeof(prices)
 ```
 
 3. Use `names()` to name the `prices` using `countries`. Show the first 5 values of your new vector
+```{r}
+names(countries)<-prices
+seq <- (1:5)
+for (i in seq)
+  print (countries[i])
+
+
+
+```
+
 
 4. Use `round()` to round the prices at the 3rd decimal. Overwrite `prices` with the rounded prices.
+```{r}
+prices <-round(prices, digits = 3)
+print (prices)
+```
 
 5. Use indexing to report the prices for Canada, United States, Mexico
+```{r}
+print(paste("Canada ",prices[c(5)]))
+print (paste("United States ", prices[c(41)]))
+print (paste("Mexico",prices[c(21)]))
+```
 
 6. Use inline code and the function `length()` to display the following sentence:
 
 "The are x observations in the Big-Mac Index"
+
+There are `r length(countries)` observations in the Big-Mac Index
 
 7. Convert the prices from Dollar to Euro (1 Dollar = .83 Euro). In the narrative, comment about the property which allows you to combine a vector of length 1 (the exchange rate) with a vector of length 56 (the prices). 
 
